@@ -67,7 +67,6 @@ var dialog = (function(){
        btns.forEach((item, index) => {
            if(index == 2) return
            let btnClass = index == 0?'confirm-btn':'cancel-btn';
-           console.log(index)
            let temp = `<a class="btn ${btnClass}" href="#">${item}</a>`
            btnTemp += temp;
            debugger
