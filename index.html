@@ -14,7 +14,8 @@
          dialog.show({  
             content: '此操作将不可逆转，确定删除此项？',
             title: '消息',
-            btns: ['确定','怕了'],  
+            btns: ['确定','怕了'], 
+            shadeClose: true, //是否开启点击遮罩关闭 
             animation: 0,   //可选动画方式 0 或者 1
             confirm: function(){
                 console.log('小伙儿，你点了确定')
