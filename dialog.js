@@ -41,7 +41,6 @@ var dialog = (function(){
     var hide = function(animationStyle){
         // 最外层执行显示动画(固定) 
         elem.classList.add('fadeOut');
-        // debugger
         // 内容层执行关闭动画
         dialog.classList.add(`${animationArr[animationStyle][1]}`);
     
@@ -69,7 +68,6 @@ var dialog = (function(){
            let btnClass = index == 0?'confirm-btn':'cancel-btn';
            let temp = `<a class="btn ${btnClass}" href="#">${item}</a>`
            btnTemp += temp;
-           debugger
        });
 
        let html = `
