@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dialog component</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <script src="dialog.js"></script>
+    <script>
+         dialog.show({  
+            content: '此操作将不可逆转，确定删除此项？',
+            title: '消息',
+            btns: ['确定','怕了'],
+            animation: 0,
+            confirm: function(){
+                console.log('小伙儿，你点了确定')
+            }
+         }) 
+    </script>
+</body>
+</html>

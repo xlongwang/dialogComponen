@@ -1,0 +1,172 @@
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none
+}
+
+.dialog_area {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(49, 49, 49, 0.5);
+  color: #313131;
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dialog_area.fadeIn {
+  animation: fadeIn .2s ease;
+}
+
+.dialog_area.fadeOut {
+  animation: fadeOut .2s ease forwards;
+}
+
+.dialog_area .dialog_pop {
+  position: relative;
+  width: 85vw;
+  max-width: 30em;
+  border-radius: .4em;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dialog_area .dialog_pop.slideDown {
+  animation: slideDown .2s ease;
+}
+
+.dialog_area .dialog_pop.slideUp {
+  animation: slideUp .2s ease forwards;
+}
+
+.dialog_area .dialog_pop.scaleIn {
+  animation: scaleIn 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4);
+}
+
+.dialog_area .dialog_pop.scaleOut {
+  animation: scaleOut 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4) forwards;
+}
+
+.dialog_area .dialog_pop .btn {
+  cursor: pointer;
+}
+
+.dialog_area .dialog_pop .btn:active {
+  background-color: #f4f4f4;
+}
+
+.dialog_area .dialog_pop .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 1.8em;
+}
+
+.dialog_area .dialog_title {
+  font-size: 1.8em;
+  padding: 15px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.dialog_area .dialog_title:empty {
+  display: none;
+}
+
+.dialog_area .dialog_content {
+  padding: 40px 20px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.dialog_area .dialog_buttons {
+  font-size: 1.6em;
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+.dialog_area .dialog_buttons .btn {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ebebeb;
+}
+
+.dialog_area .dialog_buttons .btn.confirm-btn {
+  color: #f2d985;
+}
+
+.dialog_area .dialog_buttons .btn.cancel-btn {
+  color: #313131;
+  border-right: 1px solid #ebebeb;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-3em);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-3em);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+  }
+}
